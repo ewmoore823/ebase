@@ -1,1 +1,5 @@
 ebase/db.sqlite3
+ebase/ebase/settings.py
+*.pyc
+*.swp
+*.gitignore

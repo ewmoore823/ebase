@@ -1,0 +1,10 @@
+{% if climbs %}
+  <ul>
+    {% for climb in climbs %}
+      <li>Name: {{climb.name}}</li>
+      <li>Grade: {{climb.grade}}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p> There are no climbs. </p>
+{% endif %}
