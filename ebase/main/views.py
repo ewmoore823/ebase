@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.template import loader
 
 from main.models import Climb
 
@@ -12,5 +11,8 @@ def climbs(request):
 
     context = { 'climbs': climbs, }
     return HttpResponse(render(request, 'main/climbs.html', context))
+
+def foundation(request):
+    return HttpResponse(render(request, 'main/foundation.html', {}))
 
 # Create your views here.
