@@ -21,9 +21,5 @@ def foundation(request):
     return HttpResponse(render(request, 'main/foundation.html', {}))
 
 
-def coffee(request):
-    return HttpResponse(render(request, 'main/coffee.html', {}))
-
-
-def knockout(request):
-    return HttpResponse(render(request, 'main/knockout.html', {}))
+def test(request):
+    return HttpResponse(render(request, 'main/test.html', {}))

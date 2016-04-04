@@ -5,8 +5,27 @@
     <script type='text/javascript' src="{% static 'main/js/knockout/knockout.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/foundation/foundation.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'main/css/foundation/app.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/compiled/test.css' %}">
   </head>
   <body>
+    <h3> Frontend Package Integration test </h3>
+    <p>
+      This page test the integration of four technologies:
+      <ol>
+        <li>Foundation</li>
+        <li>CoffeeScript</li>
+        <li>Knockout</li>
+        <li>SCSS</li>
+      </ol>
+    </p>
+
+    <div class="row">
+      <div class="small-3 small-offset-2">
+        <div class="test">
+          SCSS Test (this should be blue)
+        </div>
+      </div>
+    <div>
     <div class="row">
       <div class="small-1 small-offset-3">
         <button class="button" data-bind="click: get_x">Button</button>
