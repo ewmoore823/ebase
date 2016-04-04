@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<html>
+  <head>
+    <script type='text/javascript' src="{% static 'main/lib/coffee_test.js' %}"></script>
+    <script type='text/javascript' src="{% static 'main/js/knockout/knockout.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/foundation/foundation.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/foundation/app.css' %}">
+  </head>
+  <body>
+    <div class="row">
+      <div class="small-1 small-offset-3">
+        <button class="button" data-bind="click: get_x">Button</button>
+      </div>
+    <div>
+  </body>
+</html>
+
+<script>
+  (function() {
+      var test = new window.Test();
+      ko.applyBindings(test);
+  })();
+</script>

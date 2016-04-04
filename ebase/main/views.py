@@ -23,3 +23,7 @@ def foundation(request):
 
 def coffee(request):
     return HttpResponse(render(request, 'main/coffee.html', {}))
+
+
+def knockout(request):
+    return HttpResponse(render(request, 'main/knockout.html', {}))

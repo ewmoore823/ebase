@@ -11,5 +11,6 @@ urlpatterns = [
     # temporary urls. For testing package installation
     url(r'^foundation/$', views.foundation, name='foundation'),
     url(r'^coffee/$', views.coffee, name='coffee'),
+    url(r'^knockout/$', views.knockout, name='knockout'),
 
 ]
