@@ -6,6 +6,7 @@ urlpatterns = [
     # site urls
     url(r'^$', views.main, name='main'),
     url(r'^climbs/$', views.climbs, name='climbs'),
+    url(r'^site/$', views.site, name='site'),
 
 
     # temporary urls. For testing package installation

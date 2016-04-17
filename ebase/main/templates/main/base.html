@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+    <head>
+      {% block header_content %}
+        <link rel="stylesheet" type="text/css" href="{% static 'main/lib/css/foundation/foundation.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'main/lib/css/foundation/app.css' %}">
+      {% endblock header_content %}
+    </head>
+    <body>
+      {% block body_content %}
+        {% block nav_header %}
+        {% endblock nav_header %}
+        {% block footer_content %}
+        {% endblock footer_content %}
+      {% endblock body_content %}
+
+      {% block js_init %}
+        <script type='text/javascript' src="{% static 'main/js/knockout/knockout.js' %}"></script>
+        <script type='text/javascript' src="{% static 'main/js/jquery/jquery.min.js' %}"></script>
+        <script type='text/javascript' src="{% static 'main/js/what-input/what-input.js' %}"></script>
+        <script type='text/javascript' src="{% static 'main/js/foundation/foundation.min.js' %}"></script>
+        <script>
+          $(document).foundation();
+        </script>
+      {% endblock js_init %}
+    </body>
+</html>

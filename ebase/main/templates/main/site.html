@@ -1,0 +1,45 @@
+{% extends "main/base.html" %}
+{% load staticfiles %}
+
+{% block nav_header %}
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text top-bar-title"> eBase </li>
+        <li>
+          <a href="#">My Ascents</a>
+          <ul class="menu vertical">
+            <li>
+              <a href="#">Routes</a>
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li class=""><a href="#">By Grade</a></li>
+                <li class=""><a href="#">By Date</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Boulders </a>
+              <ul class="dropdown menu" data-dropdown-menu>
+                <li class=""><a href="#">By Grade</a></li>
+                <li class=""><a href="#">By Date</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li>
+            <a href="#">Name</a>
+            <ul class="menu vertical">
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </div>
+  </div>
+{% endblock nav_header %}
+

@@ -14,6 +14,9 @@ def climbs(request):
     context = {'climbs': climbs, }
     return HttpResponse(render(request, 'main/climbs.html', context))
 
+def site(request):
+    context = {}
+    return HttpResponse(render(request, 'main/site.html', context))
 
 # XXX Views for Testing package installations
 
