@@ -43,3 +43,12 @@
   </div>
 {% endblock nav_header %}
 
+{% block knockout_js_init %}
+   <script>
+       (function() {
+           var site_model = new window.SiteModel();
+           ko.applyBindings(site_model);
+       })();
+   </script>
+{% endblock knockout_js_init %}
+
