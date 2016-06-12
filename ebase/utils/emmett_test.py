@@ -1,0 +1,2 @@
+def boom():
+    print("SUCCESS!")
