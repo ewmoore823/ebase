@@ -10,7 +10,7 @@
   <div class="row">
     <div class="small-6 small-offset-3 columns end">
       <label>Enter your username
-        <input type="text" placeholder="jdoe123" aria-describedby="exampleHelpText" required>
+        <input data-bind="textInput: username" type="text" placeholder="jdoe123" aria-describedby="exampleHelpText" required>
         <span class="form-error">
           Username is required
         </span>
@@ -20,7 +20,7 @@
   <div class="row">
     <div class="small-6 small-offset-3 columns end">
       <label>Enter your Password
-        <input type="password" id="password" placeholder="password" aria-describedby="exampleHelpText" required >
+        <input data-bind="textInput: password" type="password" id="password" placeholder="password" aria-describedby="exampleHelpText" required >
         <span class="form-error">
           Password is required
         </span>
@@ -29,8 +29,18 @@
   </div>
   <div class="row">
     <fieldset class="small-3 small-offset-3 columns">
-      <button class="button" type="submit" value="Submit">Submit</button>
+      <button data-bind="click: submit" class="button" type="submit" value="Submit">Submit</button>
     </fieldset>
   </div>
 </form>
 {% endblock %}
+
+{% block knockout_js_init %}
+   <script>
+       (function() {
+           var loginModel = new window.LoginModel();
+           ko.applyBindings(loginModel);
+       })();
+   </script>
+{% endblock knockout_js_init %}
+
