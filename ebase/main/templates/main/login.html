@@ -2,5 +2,35 @@
 {% load staticfiles %}
 
 {% block body_content %}
-  <h3> Please Login</h3>
+<h2 class="text-center">Login</h2>
+<form data-abide novalidate>
+  <div data-abide-error class="alert callout" style="display: none;">
+    <p><i class="fi-alert"></i> There are some errors in your form.</p>
+  </div>
+  <div class="row">
+    <div class="small-6 small-offset-3 columns end">
+      <label>Enter your username
+        <input type="text" placeholder="jdoe123" aria-describedby="exampleHelpText" required>
+        <span class="form-error">
+          Username is required
+        </span>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 small-offset-3 columns end">
+      <label>Enter your Password
+        <input type="password" id="password" placeholder="password" aria-describedby="exampleHelpText" required >
+        <span class="form-error">
+          Password is required
+        </span>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <fieldset class="small-3 small-offset-3 columns">
+      <button class="button" type="submit" value="Submit">Submit</button>
+    </fieldset>
+  </div>
+</form>
 {% endblock %}
