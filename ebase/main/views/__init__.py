@@ -1,12 +1,22 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.contrib.auth.decorators import login_required
+from django.template import RequestContext
 
 from main.models import climb_models
 
 
 def login(request):
-    return HttpResponse(render(request, 'main/login.html', {}))
+    if request.method == "GET":
+
+        return HttpResponse(render(request, 'main/login.html',
+                                   context=RequestContext(request)))
+
+    # Password submission
+    password = request.POST.get('password', None)
+    username = request.POST.get('username', None)
+    return JsonResponse({'username': username,
+                         'password': password})
 
 
 @login_required
